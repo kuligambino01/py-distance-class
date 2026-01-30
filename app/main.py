@@ -29,7 +29,7 @@ class Distance:
     def __truediv__(self, other: int | float) -> Distance:
         return Distance(round(self.km / other, 2))
 
-    #method to check if other is instantion of Distance
+    # normalize other value to kilometers (float, int)
     def _get_km(self, other: int | float | Distance) -> int | float:
         if isinstance(other, Distance):
             return other.km
